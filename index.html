@@ -1,0 +1,120 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Squueze Header</title>
+
+        
+<!-- Styles -->
+    <link href="css/style.css" rel="stylesheet">
+    <style type="text/css">
+        header {
+            position: fixed;
+            z-index: 2;
+            width: 100%;
+            padding: 30px 0;
+            background-color: #fff;
+            box-shadow: 0px 3px 15px #888888;
+            -moz-box-shadow: 0px 3px 15px #888888;
+            -webkit-box-shadow: 0px 3px 15px #888888;
+        }
+        .top {
+            padding: 100px 0 0 0;   
+        }
+    </style>
+    
+    
+<!-- jQuery Scripts -->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script type="text/javascript">
+        
+   $(function(){
+            $('header').data('size','big');
+        });
+
+    $(window).scroll(function(){
+        if($(document).scrollTop() > 30)
+            {
+                if($('header').data('size') == 'big')
+                    {
+                        $('header').data('size','small');
+                        $('header').stop().animate({padding:'0px 0'}, 300);
+                    }
+            } else {
+                if($('header').data('size') == 'small')
+                    {
+                        $('header').data('size','big');
+                        $('header').stop().animate({padding:'30px 0'}, 300);
+                    }  
+            }
+        });
+    </script>
+
+</head>
+
+<body>   
+<header>
+    <div class="row clearfix">
+        <div class="column full nopadding">
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Work</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+
+    </div>
+</header>  
+    
+    
+<div class="container top">
+    
+<div class="row clearfix">
+<div class="column two-thirds">
+    
+        <h1>Awesome Websites</h1>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. </p>
+            
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+    
+    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. </p>
+            
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+            
+        
+    
+</div>
+  
+    
+    <!-- Sidebar  -->
+    <div class="column one-third">
+       
+        <h2>Featured Work</h2>
+        <p>The awesome work below will give you an idea of what we do.</p>
+        <ul>
+            <li>Website Name</li>
+            <li>Print Piece</li>
+            <li>Mobile App</li>
+        </ul>
+        <p><a href="#"><img src="images/button.png" alt="See More Work" /></a></p>
+    
+</div>
+</div>
+
+    
+<!-- Footer  -->
+<div class="row clearfix">
+<div class="column full nopadding">
+    <footer>
+    <p class="muted"><small>Awesome Websites &copy; 2014</small></p>
+    </footer>
+</div>
+</div>
+    
+    
+</div><!--close container --> 
+</body>
+</html>
